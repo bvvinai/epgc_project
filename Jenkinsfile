@@ -33,9 +33,9 @@ pipeline {
             steps {
                 script {
                    // sh 'kubectl delete deploy my-deployment'
-                    sh 'kubectl apply -f deployment.yaml'
+                    sh 'kubectl apply -f deployment.yml'
                    // sh 'kubectl delete service my-service'
-                    sh 'kubectl apply -f service.yaml'
+                    sh 'kubectl apply -f service.yml'
                 }
             }
         }
