@@ -1,0 +1,21 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: my-deployment 
+  labels: 
+    app: new 
+spec: 
+  replicas: 5
+  selector: 
+    matchLabels: 
+      app: new 
+  template: 
+    metadata: 
+      labels: 
+        app: new 
+    spec: 
+      containers: 
+      - name: my-container 
+        image: bvvinai/proj:latest
+        ports: 
+        - containerPort: 80
